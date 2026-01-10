@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Levi Douty (Work)
+N:Douty;Levi;;;
+ORG:Schreiber Foods
+TITLE:Manufacturing Engineer
+EMAIL;TYPE=INTERNET,WORK:levi.douty@schreiberfoods.com
+TEL;TYPE=CELL,VOICE:4175605629
+TEL;TYPE=WORK,VOICE:4173594837;ext=1111
+ADR;TYPE=WORK,POSTAL,PARCEL:;;1112 West Fairview Ave;Carthage;MO;64836;USA
+URL:https://https://www.schreiberfoods.com/
+END:VCARD
