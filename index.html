@@ -7,15 +7,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+        }
     </style>
 </head>
 <body class="text-slate-200 min-h-screen flex items-center justify-center p-4 font-sans">
 
     <div class="max-w-md w-full glass rounded-3xl p-8 shadow-2xl text-center">
         <div class="relative w-32 h-32 mx-auto mb-6">
-            <div class="absolute inset-0 bg-blue-500 rounded-full blur-lg opacity-20"></div>
-            <img src="https://ui-avatars.com/api/?name=Levi+Douty&background=0D8ABC&color=fff&size=128" alt="Levi Douty" class="relative w-32 h-32 rounded-full border-2 border-blue-400 object-cover shadow-xl">
+            <div class="absolute inset-0 bg-blue-500 rounded-full blur-xl opacity-20"></div>
+            <img src="LeviLion.jpg" alt="Levi Douty" class="relative w-32 h-32 rounded-full border-2 border-blue-400/50 object-cover shadow-2xl">
         </div>
 
         <h1 class="text-3xl font-bold tracking-tight text-white mb-1">Levi Douty</h1>
@@ -58,6 +63,4 @@
     </div>
 
 </body>
-
 </html>
-
