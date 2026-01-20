@@ -8,28 +8,28 @@
     <style>
         :root {
             --primary: #1a2a3a; /* Deep Navy */
-            --accent: #d4a017;  /* Gold/Brass */
+            --accent: #d4a017;  /* Construction Gold */
             --light: #f4f4f4;
             --white: #ffffff;
             --dark: #333;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
         body { line-height: 1.6; color: var(--dark); background: var(--white); scroll-behavior: smooth; }
 
-        /* Navigation - White background for Original Color Logo */
+        /* Navigation - Dark Background / Original Logo Color */
         nav {
-            background: var(--white);
-            color: var(--primary);
-            padding: 0.5rem 5%;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.6rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .logo-container {
@@ -38,16 +38,15 @@
         }
 
         .logo-img {
-            /* Kept the larger size for readability */
-            height: 100px; 
+            /* Balanced size for thin text legibility */
+            height: 80px; 
             width: auto;
             display: block;
-            /* Filter removed to show original colors */
             transition: transform 0.3s ease;
         }
 
         .logo-img:hover {
-            transform: scale(1.03);
+            transform: scale(1.05);
         }
 
         .nav-contact {
@@ -56,23 +55,23 @@
 
         .nav-contact span {
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--accent);
             text-transform: uppercase;
             font-weight: 800;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
+            margin-bottom: 4px;
         }
 
         .location-text {
             font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--primary);
+            font-weight: 500;
         }
 
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&w=1200&q=80');
+                        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             height: 70vh;
@@ -94,15 +93,15 @@
             padding: 15px 40px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 2px;
+            border-radius: 3px;
             transition: 0.3s;
             text-transform: uppercase;
-            border: 2px solid var(--accent);
             display: inline-block;
+            border: 2px solid var(--accent);
         }
         .btn:hover { background: transparent; color: var(--accent); }
 
-        /* Services */
+        /* Services Grid */
         .section { padding: 80px 10%; text-align: center; }
         .grid {
             display: grid;
@@ -116,33 +115,38 @@
             background: var(--light);
             border-radius: 4px;
             transition: 0.3s;
+            border-bottom: 4px solid transparent;
         }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .card:hover { 
+            transform: translateY(-8px); 
+            background: var(--white); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--accent);
+        }
+        .card i { font-size: 2.8rem; color: var(--primary); margin-bottom: 20px; }
         .card h3 { color: var(--primary); margin-bottom: 15px; }
 
         /* Contact Section */
-        #contact { background: #f9f9f9; }
+        #contact { background: #fbfbfb; }
         .contact-flex {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 50px;
             margin-top: 40px;
             text-align: left;
         }
         form { flex: 2; display: flex; flex-direction: column; gap: 15px; }
-        input, textarea { padding: 15px; border: 1px solid #ddd; border-radius: 4px; }
+        input, textarea { padding: 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
         
         .info-box { flex: 1; background: var(--primary); color: white; padding: 40px; border-radius: 4px; }
-        .info-box h3 { color: var(--accent); margin-bottom: 20px; }
+        .info-box h3 { color: var(--accent); margin-bottom: 25px; font-size: 1.6rem; }
 
-        footer { background: #111; color: #777; text-align: center; padding: 40px; }
+        footer { background: #111; color: #888; text-align: center; padding: 40px; font-size: 0.9rem; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .logo-img { height: 80px; }
-            nav { flex-direction: column; text-align: center; }
-            .nav-contact { text-align: center; margin-top: 10px; }
+            .hero h1 { font-size: 2.2rem; }
+            .logo-img { height: 65px; }
+            nav { flex-direction: row; justify-content: space-between; }
         }
     </style>
 </head>
@@ -161,47 +165,50 @@
     </nav>
 
     <header class="hero">
-        <h1>Quality Construction</h1>
-        <p>Expert Remodeling & Custom Building in Carthage, Missouri. We turn your vision into a reality with precision and integrity.</p>
-        <a href="#contact" class="btn">Get a Quote</a>
+        <h1>Building With Integrity</h1>
+        <p>Premium remodeling and custom construction serving Carthage and surrounding areas. Bringing quality craftsmanship to every project.</p>
+        <a href="#contact" class="btn">Free Estimate</a>
     </header>
 
     <section class="section">
-        <h2>Our Specializations</h2>
+        <h2>Our Services</h2>
         <div class="grid">
             <div class="card">
-                <i class="fas fa-bath"></i>
-                <h3>Remodeling</h3>
-                <p>Modernizing kitchens, bathrooms, and basements with high-end finishes.</p>
+                <i class="fas fa-hammer"></i>
+                <h3>Full Remodels</h3>
+                <p>Expertly designed kitchen, bath, and whole-home renovations.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-home"></i>
+                <h3>New Construction</h3>
+                <p>Custom residential builds tailored to your lifestyle and needs.</p>
             </div>
             <div class="card">
                 <i class="fas fa-tools"></i>
-                <h3>Additions</h3>
-                <p>Expanding your living space with seamless structural additions.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-mountain"></i>
-                <h3>Outdoor Living</h3>
-                <p>Custom decks and exterior transformations designed for the Missouri lifestyle.</p>
+                <h3>Additions & Exterior</h3>
+                <p>Increase your space with seamless additions and custom decks.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="section">
-        <h2>Start Your Project</h2>
+        <h2>Contact Us</h2>
         <div class="contact-flex">
             <form action="#">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Project Type">
-                <textarea rows="5" placeholder="Tell us about your project..."></textarea>
-                <button type="submit" class="btn">Send Message</button>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Project Interest">
+                <textarea rows="5" placeholder="Tell us about your home project..."></textarea>
+                <button type="submit" class="btn" style="cursor:pointer; width: 100%;">Send Request</button>
             </form>
             <div class="info-box">
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-phone-alt" style="color:var(--accent)"></i> Contact via Facebook for faster response</p><br>
-                <p><i class="fas fa-clock" style="color:var(--accent)"></i> Monday - Friday: 8am - 5pm</p><br>
-                <p><i class="fas fa-check-circle" style="color:var(--accent)"></i> Licensed & Insured</p>
+                <h3>Get In Touch</h3>
+                <p style="margin-bottom: 20px;"><i class="fab fa-facebook" style="color:var(--accent); margin-right: 10px;"></i> Follow us on Facebook</p>
+                <p style="margin-bottom: 20px;"><i class="fas fa-map-marker-alt" style="color:var(--accent); margin-right: 10px;"></i> Carthage, Missouri</p>
+                <p style="margin-bottom: 20px;"><i class="fas fa-clock" style="color:var(--accent); margin-right: 10px;"></i> Mon - Fri: 8am - 5pm</p>
+                <div style="margin-top: 30px; border-top: 1px solid #34495e; padding-top: 20px;">
+                    <p><small>Locally Owned & Operated in Jasper County.</small></p>
+                </div>
             </div>
         </div>
     </section>
