@@ -7,29 +7,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a2a3a; /* Deep Navy Professional */
-            --accent: #d4a017;  /* Construction Gold */
+            --primary: #1a2a3a; /* Deep Navy */
+            --accent: #d4a017;  /* Gold/Brass */
             --light: #f4f4f4;
             --white: #ffffff;
             --dark: #333;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         
         body { line-height: 1.6; color: var(--dark); background: var(--white); scroll-behavior: smooth; }
 
-        /* Navigation - Optimized for Thin White Logos */
+        /* Navigation - White background for Original Color Logo */
         nav {
-            background: var(--primary);
-            color: var(--white);
-            padding: 1rem 5%;
+            background: var(--white);
+            color: var(--primary);
+            padding: 0.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
 
         .logo-container {
@@ -38,12 +38,11 @@
         }
 
         .logo-img {
-            /* LARGE SIZE to make thin text readable */
+            /* Kept the larger size for readability */
             height: 120px; 
             width: auto;
             display: block;
-            /* Force white and add slight sharpness */
-            filter: brightness(0) invert(1) drop-shadow(0px 0px 1px rgba(255,255,255,0.5));
+            /* Filter removed to show original colors */
             transition: transform 0.3s ease;
         }
 
@@ -61,20 +60,19 @@
             color: var(--accent);
             text-transform: uppercase;
             font-weight: 800;
-            letter-spacing: 1.5px;
-            margin-bottom: 5px;
+            letter-spacing: 1px;
         }
 
         .location-text {
-            font-size: 1.2rem;
-            font-weight: 500;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
         }
 
         /* Hero Section */
         .hero {
-            /* Replace the URL below with a high-res photo of a J Builders project */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             height: 70vh;
@@ -87,109 +85,64 @@
             padding: 0 20px;
         }
 
-        .hero h1 { 
-            font-size: 4rem; 
-            margin-bottom: 1rem; 
-            text-transform: uppercase; 
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
-
-        .hero p { 
-            font-size: 1.4rem; 
-            margin-bottom: 2.5rem; 
-            max-width: 850px;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; max-width: 800px; }
 
         .btn {
             background: var(--accent);
             color: var(--white);
-            padding: 18px 45px;
+            padding: 15px 40px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 4px;
+            border-radius: 2px;
             transition: 0.3s;
             text-transform: uppercase;
-            letter-spacing: 1px;
             border: 2px solid var(--accent);
+            display: inline-block;
         }
+        .btn:hover { background: transparent; color: var(--accent); }
 
-        .btn:hover { 
-            background: transparent; 
-            color: var(--accent);
-            box-shadow: 0 0 15px rgba(212, 160, 23, 0.4);
-        }
-
-        /* Services Section */
-        .section { padding: 100px 10%; text-align: center; }
-        .section h2 { 
-            font-size: 2.5rem; 
-            margin-bottom: 50px; 
-            color: var(--primary);
-            text-transform: uppercase;
-        }
-
+        /* Services */
+        .section { padding: 80px 10%; text-align: center; }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 20px;
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .card {
-            padding: 50px 30px;
-            background: var(--white);
-            border: 1px solid #eee;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: 0.4s;
-            border-bottom: 5px solid transparent;
+            padding: 40px;
+            background: var(--light);
+            border-radius: 4px;
+            transition: 0.3s;
         }
-
-        .card:hover { 
-            transform: translateY(-10px);
-            border-bottom: 5px solid var(--accent);
-        }
-
-        .card i { font-size: 3.5rem; color: var(--accent); margin-bottom: 25px; }
-        .card h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 15px; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .card h3 { color: var(--primary); margin-bottom: 15px; }
 
         /* Contact Section */
-        #contact { background: #fcfcfc; }
-        .contact-container {
+        #contact { background: #f9f9f9; }
+        .contact-flex {
             display: flex;
             flex-wrap: wrap;
-            gap: 60px;
+            gap: 40px;
+            margin-top: 40px;
             text-align: left;
-            margin-top: 50px;
         }
-
-        form { flex: 2; display: flex; flex-direction: column; gap: 20px; }
-        input, textarea { padding: 18px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; width: 100%; }
+        form { flex: 2; display: flex; flex-direction: column; gap: 15px; }
+        input, textarea { padding: 15px; border: 1px solid #ddd; border-radius: 4px; }
         
-        .info-pane { 
-            flex: 1; 
-            background: var(--primary); 
-            color: white; 
-            padding: 50px; 
-            border-radius: 4px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
+        .info-box { flex: 1; background: var(--primary); color: white; padding: 40px; border-radius: 4px; }
+        .info-box h3 { color: var(--accent); margin-bottom: 20px; }
 
-        .info-pane h3 { color: var(--accent); font-size: 1.8rem; }
-        .info-item { display: flex; align-items: center; gap: 15px; font-size: 1.1rem; }
-        .info-item i { color: var(--accent); font-size: 1.4rem; }
+        footer { background: #111; color: #777; text-align: center; padding: 40px; }
 
-        footer { background: #0f171f; color: #666; text-align: center; padding: 50px 20px; }
-
-        /* Responsive UI */
-        @media (max-width: 900px) {
-            .hero h1 { font-size: 2.8rem; }
-            nav { flex-direction: column; gap: 20px; text-align: center; }
-            .nav-contact { text-align: center; }
-            .logo-img { height: 90px; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .logo-img { height: 80px; }
+            nav { flex-direction: column; text-align: center; }
+            .nav-contact { text-align: center; margin-top: 10px; }
         }
     </style>
 </head>
@@ -202,72 +155,59 @@
         <div class="nav-contact">
             <span>Serving Jasper County</span>
             <div class="location-text">
-                <i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> CARTHAGE, MISSOURI
+                <i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> CARTHAGE, MO
             </div>
         </div>
     </nav>
 
     <header class="hero">
         <h1>Quality Construction</h1>
-        <p>Premium remodeling, custom builds, and home additions. We pride ourselves on integrity and expert craftsmanship in every project.</p>
-        <a href="#contact" class="btn">Get Your Free Estimate</a>
+        <p>Expert Remodeling & Custom Building in Carthage, Missouri. We turn your vision into a reality with precision and integrity.</p>
+        <a href="#contact" class="btn">Get a Quote</a>
     </header>
 
     <section class="section">
-        <h2>Expertise & Services</h2>
+        <h2>Our Specializations</h2>
         <div class="grid">
             <div class="card">
-                <i class="fas fa-hammer"></i>
-                <h3>Home Remodeling</h3>
-                <p>Complete kitchen and bathroom gut-renovations designed for modern Missouri living.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-hard-hat"></i>
-                <h3>New Construction</h3>
-                <p>From the foundation to the roof, we build custom homes with precision and care.</p>
+                <i class="fas fa-bath"></i>
+                <h3>Remodeling</h3>
+                <p>Modernizing kitchens, bathrooms, and basements with high-end finishes.</p>
             </div>
             <div class="card">
                 <i class="fas fa-tools"></i>
-                <h3>Exterior Upgrades</h3>
-                <p>Increase your home value with custom decks, siding, and structural additions.</p>
+                <h3>Additions</h3>
+                <p>Expanding your living space with seamless structural additions.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mountain"></i>
+                <h3>Outdoor Living</h3>
+                <p>Custom decks and exterior transformations designed for the Missouri lifestyle.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="section">
-        <h2>Start Your Transformation</h2>
-        <div class="contact-container">
+        <h2>Start Your Project</h2>
+        <div class="contact-flex">
             <form action="#">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="text" placeholder="Subject (e.g. Kitchen Remodel)">
-                <textarea rows="6" placeholder="Tell us about your project..."></textarea>
-                <button type="submit" class="btn" style="cursor:pointer; width: 100%;">Send Message</button>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Project Type">
+                <textarea rows="5" placeholder="Tell us about your project..."></textarea>
+                <button type="submit" class="btn">Send Message</button>
             </form>
-            
-            <div class="info-pane">
-                <h3>Contact J Builders</h3>
-                <div class="info-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>Contact via Facebook Messenger</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <span>Carthage, MO & Surrounding Areas</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <span>Mon - Fri: 8:00 AM - 5:00 PM</span>
-                </div>
-                <div style="margin-top: 20px;">
-                    <p style="color: #aaa; font-size: 0.9rem;">Licensed, Insured, and Locally Owned.</p>
-                </div>
+            <div class="info-box">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone-alt" style="color:var(--accent)"></i> Contact via Facebook for faster response</p><br>
+                <p><i class="fas fa-clock" style="color:var(--accent)"></i> Monday - Friday: 8am - 5pm</p><br>
+                <p><i class="fas fa-check-circle" style="color:var(--accent)"></i> Licensed & Insured</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 J Builders LLC. Carthage, Missouri. All Rights Reserved.</p>
+        <p>&copy; 2024 J Builders LLC. Carthage, MO. All rights reserved.</p>
     </footer>
 
 </body>
